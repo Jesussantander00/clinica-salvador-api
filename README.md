@@ -1,6 +1,6 @@
 # Clínica Salvador – API REST de citas médicas
 
-Servicio web REST para agendar, consultar, cancelar y atender citas médicas en la **Clínica Salvador** (Cartagena de Indias). Está construido con **Java 17 y Spring Boot 3**, guarda la información en **PostgreSQL** y se despliega con **Docker**.
+Servicio web REST para agendar, consultar, cancelar y atender citas médicas en la **Clínica Salvador**. Está construido con **Java 17 y Spring Boot 3**, guarda la información en **PostgreSQL** y se despliega con **Docker**.
 
 > Trabajo Colaborativo – Ingeniería de Software, Universidad de Cartagena.
 > Autor: Jesús Daniel Quintana Santander.
@@ -176,7 +176,26 @@ Todas las respuestas de error tienen la misma forma:
 
 También se puede ejecutar por consola: `npx newman run postman/clinica-salvador.postman_collection.json -e postman/local.postman_environment.json`.
 
-## 7. Datos iniciales
+## 7. Diagramas y evidencias
+
+| Diagrama | Archivo |
+|---|---|
+| Casos de uso | [docs/diagramas/casos_uso.png](docs/diagramas/casos_uso.png) |
+| Entidad-relación | [docs/diagramas/er.png](docs/diagramas/er.png) |
+| Arquitectura | [docs/diagramas/arquitectura.png](docs/diagramas/arquitectura.png) |
+| Componentes | [docs/diagramas/componentes.png](docs/diagramas/componentes.png) |
+| Despliegue | [docs/diagramas/despliegue.png](docs/diagramas/despliegue.png) |
+| Secuencia (agendar cita) | [docs/diagramas/secuencia.png](docs/diagramas/secuencia.png) |
+
+Resultados verificados:
+
+* `mvn verify`: **65 pruebas, 0 fallos** ([evidencia](docs/evidencias/junit.png)).
+* Docker Compose: contenedores `clinica-db` y `clinica-api` en ejecución ([evidencia](docs/evidencias/docker.jpg)).
+* Postman Collection Runner: **36 solicitudes, 92 pruebas aprobadas, 0 fallidas** ([evidencia](docs/evidencias/postman1.jpg)).
+
+![Arquitectura](docs/diagramas/arquitectura.png)
+
+## 8. Datos iniciales
 
 | Médico | Especialidad | Horario |
 |---|---|---|
